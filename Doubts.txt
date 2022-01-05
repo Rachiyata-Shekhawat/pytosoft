@@ -1,0 +1,31 @@
+::after and ::before ??
+Contact background animation
+<frame>
+<canvas>
+Our product - background video ? | why multiple nested classes
+#document
+why <body> < #document < frame < html
+<link rel=preload>
+css transitions
+.video-table-cell - why table for video
+display: tabel-cell
+vertical align
+why not able to export svg images
+how to create SVG image
+meta tags
+link rel types and purpose
+fontawesome - how when  => icons, css
+index page - series content - moving while scrololing up and down - how ?
+index page - series content - hpw underline is increasing and decreasing on movements - 
+
+
+
+
+my design
+- how to resolve dancing menu
+- when mobile to desktop - if menu is display none then it stays as it is and does not display = block due to js
+
+//banner
+- how to give animation to banner 
+- how to optimise banner js
+
