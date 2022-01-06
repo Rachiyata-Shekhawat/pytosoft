@@ -182,7 +182,7 @@
             <p class="indexAboutUsDetails_top_para2 indexAboutUsDetails_para">
               We offer end to end consulting services, design, development and managed services across Infrastructure, Cloud, Mobility, BI, Analytics, Product Engineering, QA & Testing, IoT, Big Data, and Artificial Intelligence.
             </p>
-            <button class="readMeBlack">
+            <button class="readMeBlack" onclick="readMore()" id="readMoreId">
               <a href="#indexAboutUsDetailsId">
                 Read More
               </a>
@@ -279,6 +279,49 @@
     </div>
   </main>
 
+  <!-- pop up design-->
+  <div class="popUp" id="popUpId">
+    <div class="popUp-content">
+      <h4>pop-up heading</h4>
+      <div class="closeMark" onclick="closePopUp()" id="closeMarkId">&times;</div>
+      <p>pop-up para</p>
+      <button class="closeButton" id="closeButtonId" onclick="closePopUp()">Close</button>
+    </div>
+  </div>
+
+  <!-- chat box design -->
+  <div class="chatBox flex">
+
+    <div class="chatBox-popUp" id="chatBox-popUpID">
+      <span class="chatBlueLine"></span>
+      <div class="userIcon">
+        <img src="assets/images/user.svg" alt="User">
+      </div>
+      <div class="chatBox-popUp-content">
+        <h6>Robo from PytoSoft</h6>
+        <p>Hi there! So we’re away right now, but if you leave us a message we’ll get back to you soon.</p>
+        <input type="text" placeholder="Reply to Robo" value="">
+        <!-- <form action=""></form> -->
+        <div class="emoji">
+          <img src="" alt="">
+        </div>
+        <div class="emoji-popUp"></div>
+        <div class="chatBox-popUp-content-footer">
+          Chat
+          <img src="" alt="">
+          by
+          <a href="https://www.drift.com/powered-by/?utm_source=pytosoft.sapphireexch.in&utm_medium=web-widget&utm_campaign=widget-referral&utm_version=v2" target="_blank">Drift</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="chatBox-icon" id="chatBox-iconID" onclick="openChat()">
+      <img src="assets/images/chat.png" alt="Chat">
+    </div>
+    <div class="chatBox-iconClose" id="chatBox-iconCloseID" onclick="closeChat()">
+      <img src="assets/images/cross.svg" alt="close chat">
+    </div>
+  </div>
 
   <footer></footer>
 

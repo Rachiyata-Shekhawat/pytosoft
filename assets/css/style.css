@@ -82,7 +82,10 @@ header .container-margin { flex-direction: column; }
 
 .headerNavLi a { color: #2d2d2d;}
 
-.serviceLi {position: relative;}
+.serviceLi {
+  position: relative;
+  cursor: pointer;
+}
 
 .serviceLi::after {
   padding-left: 6px;
@@ -238,40 +241,214 @@ main {
 
 .indexAboutUsDetails_bottomSeries_02 {margin: 3rem 0;}
 
+/* pop - up */
+.popUp {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  display: none;
+  overflow: auto;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.popUp-content {
+  width: 70%;
+  border-radius: 3px;
+  margin: auto auto;
+  box-shadow: 1px 1px 7px black;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+}
+
+.popUp-content h4 {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px black;
+  color: #2d2d2d;
+}
+
+.popUp-content p {
+  padding: 2rem 0.5rem;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  color: #1c303e;
+}
+
+.closeMark {
+  margin-right: 1rem;
+  align-self: flex-end;
+  font-size: 30px;
+  font-weight: 900;
+  color: #000;
+  opacity: .5;
+  cursor: pointer;
+}
+
+.closeMark:hover { opacity: 1; }
+
+.closeButton {
+  width: 33%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d43f3a;
+  border-radius: 6px;
+  margin: 1rem;
+  align-self: flex-end;
+  background-color: #d9534f;
+  font-size: ;
+  color: white;
+}
+
+.closeButton:hover { background-color: #c9302c; }
+
+/* chat-box */
+.chatBox {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  right: 38px;
+    bottom: 50px;
+  flex-direction: column;
+  
+}
+
+.chatBox-popUp {
+  /* display: none; */
+  visibility: hidden;
+  width: 30%;
+  align-self: flex-end;
+  background: white;
+    box-shadow: 1px 1px 11px black;
+    border-radius: 7px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.chatBlueLine {
+  width: 100%;
+  height: 5px;
+  display: block;
+  background-color: rgb(1, 118, 255);
+  border-radius: 7px 7px 0px 0px;
+  border-radius: 7px 7px 0px 0px;
+    height: 9px;
+}
+
+.userIcon {
+  width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    position: absolute;
+    top: -20px;
+    left: 16px;
+}
+
+.userIcon img {
+  width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    /* padding-top: 14px; */
+    margin-top: 3px;
+}
 
 
-/* 
-.indexAboutUsDetails_bottomSeries_01_imageBox_img img,
-.indexAboutUsDetails_bottomSeries_02_imageBox_img img,
-.indexAboutUsDetails_bottomSeries_03_imageBox_img img { width: 100%; } */
+.chatBox-popUp-content {
+  padding: 1rem;
+}
 
+.chatBox-popUp-content h6 {
+  text-align: center;
+    font-weight: 100;
+    color: rgb(138, 146, 151);
+    letter-spacing: 0.03rem;
+}
+
+.chatBox-popUp-content p {
+  margin: 1rem 0;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    letter-spacing: .02rem;
+    /* color: rgb(157 169 176); */
+    color: black;
+}
+
+.chatBox-popUp-content input {
+  width: 100%;
+  border-radius: 5px;
+  height: 36px;
+  border: 1px solid rgb(157 169 176);
+  outline: none;
+  padding-left: 1rem;
+}
+
+.chatBox-popUp-content input::placeholder {
+  color: red;
+  font-size: 0.9rem;
+    line-height: 1.3rem;
+    letter-spacing: .02rem;
+    /* color: rgb(157 169 176); */
+    color: rgb(138, 146, 151);
+    /* padding-left: 1rem; */
+}
+
+/* .chatBox-popUp-content input::focus {
+  border: 1px solid rgb(157 169 176);
+} */
+
+.emoji {}
+
+.emoji img {}
+
+.emoji-popUp {}
+
+.chatBox-popUp-content-footer {
+  text-align: center; 
+  font-size: 0.8rem;
+    color: rgb(138, 146, 151);
+}
+
+.chatBox-popUp-content-footer a { color: rgb(1, 118, 255);}
+
+.chatBox-icon {
+  width: 55px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.chatBox-icon img { width: 100%; }
+
+.chatBox-iconClose {
+  display: none;
+  /* visibility: collapse; */
+  background: blue;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  align-self: flex-end;
+  width: 55px;
+    height: 55px;
+    background-color: rgb(1, 118, 255);
+}
+
+.chatBox-iconClose img { width: 100%; }
 
 /*========================= footer styling =========================*/
 
 
 /*====================== media query styling =======================*/
-@media only screen and (min-width:992px) {
-  /*================== header styling ==================*/
-    header .container-margin { flex-direction: row; }
 
-    .menuButton { display: none;}
-
-    .headerNav { 
-      margin-top: 1rem;
-      display: block;
-    }
-
-    .headerNavLi { width: auto;}
-
-    .headerNav,
-    .headerNavLi { border:none;}
-
-    .subNav { background-color: transparent;}
-
-  /*=================== main styling ===================*/
-  /*================== footer styling ==================*/
-  
-}
+/* 768px, 992px, 1097px */
 
 @media only screen and (min-width:768px) {
   /*=================== main styling ===================*/
@@ -293,9 +470,30 @@ main {
     .indexAboutUsDetails_bottomSeries_03 { flex-direction: row-reverse; }
 
     .indexAboutUsDetails_bottomSeries_02 { flex-direction: row;}
+
+  /* ================== pop up ==================== */
+    .popUp-content { width: 538px;}
+
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width:992px) {
+  /*================== header styling ==================*/
+    header .container-margin { flex-direction: row; }
+
+    .menuButton { display: none;}
+
+    .headerNav { 
+      margin-top: 1rem;
+      display: block;
+    }
+
+    .headerNavLi { width: auto;}
+
+    .headerNav,
+    .headerNavLi { border:none;}
+
+    .subNav { background-color: transparent;}
+
   /*=================== main styling ===================*/
     .indexAboutUsDetails_content {width:40%;}
 
@@ -315,11 +513,15 @@ main {
 
     .indexAboutUsDetails_bottomSeries_02_imageBox_borderBox,
     .indexAboutUsDetails_videoBox .indexAboutUsDetails_imageBox_borderBox { left: -41px; }
-
+    
+  /*================== footer styling ==================*/
+  
 }
 
 @media only screen and (min-width: 1097px) {
   /*=================== main styling ===================*/
+    .container-margin { width: 84%;}
+    
     .indexAboutUsDetails_bottomSeries_02_imageBox_borderBox {
       height: 100%;
   }

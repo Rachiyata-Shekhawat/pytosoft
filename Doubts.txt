@@ -29,3 +29,5 @@ my design
 - how to give animation to banner 
 - how to optimise banner js
 
+-how to get readMore pop-up  ?
+
